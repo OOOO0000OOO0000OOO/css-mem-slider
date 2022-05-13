@@ -154,3 +154,97 @@ label:hover #bullet-6:checked ~ .bullets-form #label-6 .bullet {
   background: transparent;
   border: 0.25em solid #ffffff;
 }
+
+/* image sliding */
+
+#bullet-2:checked ~ .slides-container #slide-1,
+#bullet-2:checked ~ .slides-container #slide-2,
+#bullet-2:checked ~ .slides-container #slide-3,
+#bullet-2:checked ~ .slides-container #slide-4,
+#bullet-2:checked ~ .slides-container #slide-5,
+#bullet-2:checked ~ .slides-container #slide-6 {
+ transform: translateX(-100%);
+}
+
+#bullet-3:checked ~ .slides-container #slide-1,
+#bullet-3:checked ~ .slides-container #slide-2,
+#bullet-3:checked ~ .slides-container #slide-3,
+#bullet-3:checked ~ .slides-container #slide-4,
+#bullet-3:checked ~ .slides-container #slide-5,
+#bullet-3:checked ~ .slides-container #slide-6 {
+ transform: translateX(-200%);
+}
+
+#bullet-4:checked ~ .slides-container #slide-1,
+#bullet-4:checked ~ .slides-container #slide-2,
+#bullet-4:checked ~ .slides-container #slide-3,
+#bullet-4:checked ~ .slides-container #slide-4,
+#bullet-4:checked ~ .slides-container #slide-5,
+#bullet-4:checked ~ .slides-container #slide-6 {
+ transform: translateX(-300%);
+}
+
+#bullet-5:checked ~ .slides-container #slide-1,
+#bullet-5:checked ~ .slides-container #slide-2,
+#bullet-5:checked ~ .slides-container #slide-3,
+#bullet-5:checked ~ .slides-container #slide-4,
+#bullet-5:checked ~ .slides-container #slide-5,
+#bullet-5:checked ~ .slides-container #slide-6 {
+ transform: translateX(-400%);
+}
+
+#bullet-6:checked ~ .slides-container #slide-1,
+#bullet-6:checked ~ .slides-container #slide-2,
+#bullet-6:checked ~ .slides-container #slide-3,
+#bullet-6:checked ~ .slides-container #slide-4,
+#bullet-6:checked ~ .slides-container #slide-5,
+#bullet-6:checked ~ .slides-container #slide-6 {
+ transform: translateX(-500%);
+}
+
+/* title sliding */
+
+#bullet-2:checked ~ .titles-container #title-1,
+#bullet-2:checked ~ .titles-container #title-2,
+#bullet-2:checked ~ .titles-container #title-3,
+#bullet-2:checked ~ .titles-container #title-4,
+#bullet-2:checked ~ .titles-container #title-5,
+#bullet-2:checked ~ .titles-container #title-6 {
+transform: translateX(-100%);
+}
+
+#bullet-3:checked ~ .titles-container #title-1,
+#bullet-3:checked ~ .titles-container #title-2,
+#bullet-3:checked ~ .titles-container #title-3,
+#bullet-3:checked ~ .titles-container #title-4,
+#bullet-3:checked ~ .titles-container #title-5,
+#bullet-3:checked ~ .titles-container #title-6 {
+transform: translateX(-200%);
+}
+
+#bullet-4:checked ~ .titles-container #title-1,
+#bullet-4:checked ~ .titles-container #title-2,
+#bullet-4:checked ~ .titles-container #title-3,
+#bullet-4:checked ~ .titles-container #title-4,
+#bullet-4:checked ~ .titles-container #title-5,
+#bullet-4:checked ~ .titles-container #title-6 {
+transform: translateX(-300%);
+}
+
+#bullet-5:checked ~ .titles-container #title-1,
+#bullet-5:checked ~ .titles-container #title-2,
+#bullet-5:checked ~ .titles-container #title-3,
+#bullet-5:checked ~ .titles-container #title-4,
+#bullet-5:checked ~ .titles-container #title-5,
+#bullet-5:checked ~ .titles-container #title-6 {
+transform: translateX(-400%);
+}
+
+#bullet-6:checked ~ .titles-container #title-1,
+#bullet-6:checked ~ .titles-container #title-2,
+#bullet-6:checked ~ .titles-container #title-3,
+#bullet-6:checked ~ .titles-container #title-4,
+#bullet-6:checked ~ .titles-container #title-5,
+#bullet-6:checked ~ .titles-container #title-6 {
+transform: translateX(-500%);
+}
