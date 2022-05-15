@@ -252,7 +252,7 @@ transform: translateX(-400%);
 transform: translateX(-500%);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
   h1 {
     font-size: 1.75rem;
   }
@@ -277,7 +277,7 @@ transform: translateX(-500%);
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 40rem) {
   h1 {
     font-size: 1.5rem;
   }
