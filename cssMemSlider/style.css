@@ -255,7 +255,7 @@ transform: translateX(-500%);
 
   .slider {
     width: 80%;
-    grid-template-rows: 80% 5% 1fr 1fr;
+    grid-template-rows: 80% 3% 3% 3% 1fr;
     grid-template-columns: 1fr;
   }
 
@@ -269,13 +269,13 @@ transform: translateX(-500%);
   }
 
   .titles-container {
-    grid-area: 4 / 1 / 5 / 2;
+    grid-area: 5 / 1 / 6 / 2;
   }
 }
 
 @media (max-width: 40rem) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 
   .slider {
