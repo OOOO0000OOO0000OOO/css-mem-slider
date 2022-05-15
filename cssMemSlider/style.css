@@ -16,7 +16,6 @@ body {
   font-family: "Ubuntu Mono", monospace;
   color: #ffffff;
   background-color: #030303;
-
 }
 
 h1 {
@@ -247,14 +246,17 @@ transform: translateX(-400%);
 transform: translateX(-500%);
 }
 
+/* adaptive */
+
 @media (max-width: 64rem) {
   h1 {
     font-size: 1.75rem;
+    padding: 1rem 0 0 0;
   }
 
   .slider {
     width: 80%;
-    grid-template-rows: 80% 3% 3% 3% 1fr;
+    grid-template-rows: 80% repeat(3, 1em) 1fr;
     grid-template-columns: 1fr;
   }
 
@@ -288,5 +290,21 @@ transform: translateX(-500%);
 
   .bullets-form label {
     width: 2em;
+  }
+}
+
+@media (max-height: 40rem) {
+  h1 {
+    font-size: 1rem;
+    padding: 1rem 0 0 0;
+  }
+
+  .slider {
+    height: 100%;
+    grid-template-rows: 9fr repeat(3, 1em) 1fr;
+  }
+
+  .titles-container .slide-title {
+    font-size: 1rem;
   }
 }
