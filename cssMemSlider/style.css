@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+/* common styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu Mono", monospace;
+  color: #ffffff;
+  background-color: #030303;
+}
+
+h1 {
+  padding: 0 0 1rem 0;
+  text-align: center;
+  font-weight: 100;
+}
+
+.slider {
+  margin: 0 auto;
+  padding: 1.5em;
+  height: 80%;
+  width: 50%;
+  display: grid;
+  grid-template-rows: 80% 5% 1fr;
+  grid-template-columns: 65% 35%;
+  background-color: #030303;
+}
+
+/* slides-container */
+
+.slides-container {
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+  overflow: hidden;
+  background-color: #2e2e2e;
+}
+
+.slider .slides-container .slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.slide:nth-child(1) {
+  background: url("./assets/1.jpg");
+}
+
+.slide:nth-child(2) {
+  background: url("./assets/2.jpg");
+}
+
+.slide:nth-child(3) {
+  background: url("./assets/3.jpg");
+}
+
+.slide:nth-child(4) {
+  background: url("./assets/4.jpg");
+}
+
+.slide:nth-child(5) {
+  background: url("./assets/5.jpg");
+}
+
+.slide:nth-child(6) {
+  background: url("./assets/6.jpg");
+}
+
+/* slide-titles */
+
+.titles-container {
+  grid-area: 3 / 1 / 4 / 2;
+  display: flex;
+  overflow: hidden;
+}
+
+.titles-container .slide-title {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  font-size: 1.25rem;
+  transition: transform 0.5s ease;
+}
+
+/* bullets */
+
+.bullets-form {
+  grid-area: 3 / 2 / 4 / 3;
+  justify-self: end;
+  display: flex;
+}
+
+.radio-input {
+  display: none;
+}
+
+.bullets-form label {
+  display: flex;
+  justify-content: center;
+  height: 2em;
+  width: 1.5em;
+  cursor: pointer;
+}
+
+.bullet {
+  width: 1em;
+  height: 1em;
+  background-color: #c4c4c4;
+}
+
+label:hover .bullet {
+  background-color: #ffffff;
+  transition: .2s ease-in-out;
+}
+
+label:active .bullet {
+  transform: scale(1.25);
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+#bullet-1:checked ~ .bullets-form #label-1 .bullet,
+#bullet-2:checked ~ .bullets-form #label-2 .bullet,
+#bullet-3:checked ~ .bullets-form #label-3 .bullet,
+#bullet-4:checked ~ .bullets-form #label-4 .bullet,
+#bullet-5:checked ~ .bullets-form #label-5 .bullet,
+#bullet-6:checked ~ .bullets-form #label-6 .bullet {
+  background: transparent;
+  border: 0.25em solid #c4c4c4;
+  transition: transform 0.2s ease-in-out;
+}
+
+label:hover #bullet-1:checked ~ .bullets-form #label-1 .bullet,
+label:hover #bullet-2:checked ~ .bullets-form #label-2 .bullet,
+label:hover #bullet-3:checked ~ .bullets-form #label-3 .bullet,
+label:hover #bullet-4:checked ~ .bullets-form #label-4 .bullet,
+label:hover #bullet-5:checked ~ .bullets-form #label-5 .bullet,
+label:hover #bullet-6:checked ~ .bullets-form #label-6 .bullet {
+  background: transparent;
+  border: 0.25em solid #ffffff;
+}
+
+/* image sliding */
+
+#bullet-2:checked ~ .slides-container #slide-1,
+#bullet-2:checked ~ .slides-container #slide-2,
+#bullet-2:checked ~ .slides-container #slide-3,
+#bullet-2:checked ~ .slides-container #slide-4,
+#bullet-2:checked ~ .slides-container #slide-5,
+#bullet-2:checked ~ .slides-container #slide-6 {
+ transform: translateX(-100%);
+}
+
+#bullet-3:checked ~ .slides-container #slide-1,
+#bullet-3:checked ~ .slides-container #slide-2,
+#bullet-3:checked ~ .slides-container #slide-3,
+#bullet-3:checked ~ .slides-container #slide-4,
+#bullet-3:checked ~ .slides-container #slide-5,
+#bullet-3:checked ~ .slides-container #slide-6 {
+ transform: translateX(-200%);
+}
+
+#bullet-4:checked ~ .slides-container #slide-1,
+#bullet-4:checked ~ .slides-container #slide-2,
+#bullet-4:checked ~ .slides-container #slide-3,
+#bullet-4:checked ~ .slides-container #slide-4,
+#bullet-4:checked ~ .slides-container #slide-5,
+#bullet-4:checked ~ .slides-container #slide-6 {
+ transform: translateX(-300%);
+}
+
+#bullet-5:checked ~ .slides-container #slide-1,
+#bullet-5:checked ~ .slides-container #slide-2,
+#bullet-5:checked ~ .slides-container #slide-3,
+#bullet-5:checked ~ .slides-container #slide-4,
+#bullet-5:checked ~ .slides-container #slide-5,
+#bullet-5:checked ~ .slides-container #slide-6 {
+ transform: translateX(-400%);
+}
+
+#bullet-6:checked ~ .slides-container #slide-1,
+#bullet-6:checked ~ .slides-container #slide-2,
+#bullet-6:checked ~ .slides-container #slide-3,
+#bullet-6:checked ~ .slides-container #slide-4,
+#bullet-6:checked ~ .slides-container #slide-5,
+#bullet-6:checked ~ .slides-container #slide-6 {
+ transform: translateX(-500%);
+}
+
+/* title sliding */
+
+#bullet-2:checked ~ .titles-container #title-1,
+#bullet-2:checked ~ .titles-container #title-2,
+#bullet-2:checked ~ .titles-container #title-3,
+#bullet-2:checked ~ .titles-container #title-4,
+#bullet-2:checked ~ .titles-container #title-5,
+#bullet-2:checked ~ .titles-container #title-6 {
+transform: translateX(-100%);
+}
+
+#bullet-3:checked ~ .titles-container #title-1,
+#bullet-3:checked ~ .titles-container #title-2,
+#bullet-3:checked ~ .titles-container #title-3,
+#bullet-3:checked ~ .titles-container #title-4,
+#bullet-3:checked ~ .titles-container #title-5,
+#bullet-3:checked ~ .titles-container #title-6 {
+transform: translateX(-200%);
+}
+
+#bullet-4:checked ~ .titles-container #title-1,
+#bullet-4:checked ~ .titles-container #title-2,
+#bullet-4:checked ~ .titles-container #title-3,
+#bullet-4:checked ~ .titles-container #title-4,
+#bullet-4:checked ~ .titles-container #title-5,
+#bullet-4:checked ~ .titles-container #title-6 {
+transform: translateX(-300%);
+}
+
+#bullet-5:checked ~ .titles-container #title-1,
+#bullet-5:checked ~ .titles-container #title-2,
+#bullet-5:checked ~ .titles-container #title-3,
+#bullet-5:checked ~ .titles-container #title-4,
+#bullet-5:checked ~ .titles-container #title-5,
+#bullet-5:checked ~ .titles-container #title-6 {
+transform: translateX(-400%);
+}
+
+#bullet-6:checked ~ .titles-container #title-1,
+#bullet-6:checked ~ .titles-container #title-2,
+#bullet-6:checked ~ .titles-container #title-3,
+#bullet-6:checked ~ .titles-container #title-4,
+#bullet-6:checked ~ .titles-container #title-5,
+#bullet-6:checked ~ .titles-container #title-6 {
+transform: translateX(-500%);
+}
+
+/* adaptive */
+
+@media (max-width: 64rem) {
+  h1 {
+    font-size: 1.75rem;
+    padding: 1rem 0 0 0;
+  }
+
+  .slider {
+    width: 80%;
+    grid-template-rows: 80% repeat(3, 1.5em) 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .slides-container {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .bullets-form {
+    grid-area: 3 / 1 / 4 / 2;
+    justify-self: center;
+  }
+
+  .titles-container {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+}
+
+@media (max-width: 40rem) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .slider {
+    width: 90%;
+    font-size: 0.75em;
+  }
+
+  .titles-container .slide-title {
+    font-size: 1.5em;
+  }
+
+  .bullets-form label {
+    width: 2em;
+  }
+}
+
+@media (max-height: 40rem) {
+  h1 {
+    font-size: 1rem;
+    padding: 1rem 0 0 0;
+  }
+
+  .slider {
+    height: 100%;
+    grid-template-rows: 9fr repeat(3, 1em) 1fr;
+  }
+
+  .titles-container .slide-title {
+    font-size: 1rem;
+  }
+}
